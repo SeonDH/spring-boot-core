@@ -1,0 +1,18 @@
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!-- TODO-1 %색상() 이런식으로 감싸거나, %highlight 를 이용하여 색을 입힐 수 있다. -->
+            <pattern>%red(%d{yyyy-MM-dd HH:mm:ss}) %white([%thread]) %-5level %logger{36} - %highlight(%msg) %n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- TODO-2 TRACE 까지 로그를 찍으려면 level 조정을 해야한다. -->
+    <logger name="org.example.greeting" level="trace" additivity="false">
+        <appender-ref ref="STDOUT"/>
+    </logger>
+
+    <root level="info">
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+</configuration>
