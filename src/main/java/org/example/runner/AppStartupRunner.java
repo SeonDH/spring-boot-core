@@ -13,13 +13,13 @@ import java.io.IOException;
 @Component
 public class AppStartupRunner implements ApplicationRunner {
 
-    private final Sender sender;
+    private final Sender telegramWebHookSender;
 
     @Override
     public void run(ApplicationArguments args) throws IOException {
 
         Request request = new Request("sando", "hello");
-        sender.sendMessage(request);
+        telegramWebHookSender.sendMessage(request);
 
     }
 }
