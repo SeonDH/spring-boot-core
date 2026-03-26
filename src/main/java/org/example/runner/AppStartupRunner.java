@@ -11,13 +11,13 @@ import org.springframework.stereotype.Component;
 @Component
 public class AppStartupRunner implements ApplicationRunner {
 
-    private final MessageSender messageSender;
+    private final MessageSender telegramWebHookSender;
 
     @Override
     public void run(ApplicationArguments args) {
 
-        // TODO-6 원하는 메시지를 설정한다.
-        messageSender.sendMessage(new Request(null, null));
+        // TODO-5 원하는 메시지를 설정한다.
+        telegramWebHookSender.sendMessage(new Request(null, null));
 
     }
 }
