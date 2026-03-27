@@ -15,7 +15,8 @@ public class AppStartupRunner implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) {
-        System.out.println(greeting.getEnglish());
-        System.out.println(greeting.getKorean());
+        // record 는 getXxx() 대신 필드명()으로 접근한다.
+        System.out.println(greeting.english());
+        System.out.println(greeting.korean());
     }
 }
