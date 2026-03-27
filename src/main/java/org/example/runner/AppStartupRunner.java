@@ -19,11 +19,9 @@ public class AppStartupRunner implements ApplicationRunner {
     public void run(ApplicationArguments args) {
 
         //TODO-2 System.out.println 을 다른 방식으로 바꾼다.
-        System.out.println(highSchoolStudent.getSchool());
-        System.out.println(highSchoolStudent.echo("hello, high school"));
+        System.out.println(highSchoolStudent.echo("hello, high school. My school is ") + highSchoolStudent.getSchool());
 
-        System.out.println(universityStudent.getSchool());
-        System.out.println(universityStudent.echo("hello, university"));
+        System.out.println(universityStudent.echo("hello, university. My school is ") + universityStudent.getSchool());
 
     }
 }
