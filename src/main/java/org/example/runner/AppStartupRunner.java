@@ -26,7 +26,7 @@ public class AppStartupRunner implements ApplicationRunner {
 
         Sender sender = applicationContext.getBean(Sender.class);
 
-        //TODO-5 이름과 원하는 메시지를 채운다.
+        //TODO-6 이름과 텔레그램으로 전송할 메시지를 채운다.
         Request request = new Request(null, null);
         sender.sendMessage(request);
 
